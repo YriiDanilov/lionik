@@ -1,0 +1,468 @@
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .hero {
+        padding-top: 80px;
+        padding-bottom: 90px;
+        margin-bottom: 40px;
+    }
+
+    .services {
+        padding-bottom: 80px;
+    }
+
+    .services-card {
+        grid-column: auto / span 4;
+    }
+
+    .articles {
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+
+    .article-card {
+        grid-column: auto / span 6;
+    }
+
+    .clients {
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+
+    .client-card {
+        grid-column: auto / span 4;
+        padding-top: 24px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .contacts {
+        padding-top: 40px;
+        padding-bottom: 80px;
+        border-bottom: 1px solid var(--border-section-color);
+    }
+
+    .contacts__title {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .contact-card {
+        grid-column: auto / span 4;
+    }
+
+    .footer-wrapper {
+        padding-bottom: 24px;
+    }
+
+    .footer__copyright {
+        display: none;
+    }
+
+    .footer__copyright_media {
+        display: block;
+        padding-top: 16px;
+        text-align: center;
+        border-top: 1px solid var(--border-section-color);
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .header {
+        position: relative;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .header-btn {
+        margin-right: 64px;
+    }
+
+    .hamb {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 30px;
+        right: 24px;
+        display: flex;
+        align-items: center;
+        z-index: 101;
+        border: 1px solid var(--color-blue);
+        border-radius: 3px;
+    }
+
+    .hamb__field {
+        padding: 0 9px;
+        cursor: pointer;
+    }
+
+    .bar {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 6px 0;
+        background-color: #0E3B6C;
+        transition: 0.2s;
+    }
+
+    .popup {
+        position: fixed;
+        top: 0;
+        right: -400px;
+        width: 400px;
+        height: 100%;
+        background-color: #fff;
+        z-index: 100;
+        display: flex;
+        transition: 0.3s;
+    }
+
+    .popup_open {
+        right: 0;
+    }
+    /* Темный фон при открытом меню */
+    .popup-fade::before{
+        content: '';
+        background: var(--color-black);
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        z-index: 100;
+    }
+
+    /* Меню при открытом боковом меню */
+
+    .popup .header__menu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 80px 0;
+        overflow: auto;
+    }
+
+    .header-nav__item {
+        width: 100%;
+    }
+    /* фон ссылки */
+    
+    .header-nav__item::after {
+        display: none;
+    }
+
+    .header-nav__link {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--color-black);
+    }
+
+    .header-nav__link:hover {
+        background-color: var(--color-blue);
+    }
+
+    .header-nav__item_active::after {
+        display: none;
+    }
+
+    .hamb__field.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamb__field.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamb__field.active .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    .hero-wrapper {
+        margin: 0 auto;
+        display: grid;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .services-card {
+        grid-column: auto / span 6;
+    }
+
+    .articles__title {
+        text-align: center;
+    }
+
+    .article-card {
+        grid-column: 2 / span 10;
+    }
+
+    .clients__title {
+        text-align: center;
+    }
+
+    .client-card {
+        grid-column: auto / span 6;
+    }
+
+    .contacts__title {
+        text-align: center;
+    }
+
+    .footer-wrapper {
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        gap: 32px;
+    }
+
+    .footer-menu-wrapper {
+        display: grid;
+        justify-items: center;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .hero {
+        padding-top: 40px;
+        padding-bottom: 50px;
+        margin-bottom: 0;
+        background-image: none;
+        background-color: var(--color-white);
+    }
+
+    .services {
+        padding-bottom: 40px;
+    }
+
+    .services-card {
+        grid-column: auto / span 4;
+    }
+
+    .articles {
+        padding-bottom: 40px;
+    }
+
+    .article-card {
+        grid-column: auto / span 8;
+    }
+
+    .clients {
+        padding-bottom: 40px;
+    }
+
+    .client-card {
+        grid-column: auto / span 4;
+    }
+
+    .contacts {
+        padding-bottom: 40px;
+    }
+
+    .contacts-wrapper {
+        grid-row-gap: 60px;
+    }
+
+    .contact-card {
+        grid-column: auto / span 4;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        margin: 0 24px;
+    }
+    .popup {
+        right: -100%;
+        width: 100%;
+    }
+
+    .popup_open {
+        right: 0;
+    }
+
+    .services-card {
+        grid-column: 2 / span 6;
+    }
+
+    .article-card {
+        grid-column: auto / span 8;
+    }
+
+    .client-card {
+        display: grid;
+        grid-column: 2 / span 6;
+        justify-items: start;
+    }
+
+    .client-card__review-text {
+        max-width: none;
+    }
+
+    .contacts-wrapper {
+        justify-items: center;
+    }
+
+    .contact-card {
+        grid-column: auto / span 8;
+    }
+
+    .contacts-card__wrapper{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        margin: 0 16px;
+    }
+
+    .menu-wrapper {
+        gap: 0;
+    }
+
+    .hamb {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hamb__field {
+        padding: 0 7px;
+    }
+
+    .hamb__field.active .bar:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .hamb__field.active .bar:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .bar {
+        width: 24px;
+        height: 2px;
+        margin: 4px auto;
+        transition: 0.2s;
+    }
+
+    .button-trial {
+        padding: 10px 20px;
+    }
+
+    .button-container {
+        width: 100%;
+    }
+
+    .button-trial_size_lg {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .services-card {
+        grid-column: 2 / span 6;
+    }
+
+    .article-card {
+        grid-column: auto / span 8;
+    }
+
+    .article__img-wrapper {
+        width: 20%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .article-wrapper {
+        padding: 16px 0;
+    }
+
+    .article__img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+
+    .client-card {
+        grid-column: 2 / span 6;
+    }
+
+    .contacts-wrapper {
+        justify-items: center;
+    }
+
+    .contact-card {
+        grid-column: auto / span 8;
+    }
+
+    .contacts-card__wrapper{
+        justify-content: center;
+    }
+
+    .footer-nav {
+        width: 100%;
+    }
+
+    .footer-list {
+        display: grid;
+        grid-gap: 24px;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: start;
+    }
+
+    .footer-nav__item {
+        grid-column: auto / span 2;
+    }
+}
+
+@media (max-width: 380px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .services-card {
+        grid-column: auto / span 4;
+    }
+
+    .article-card {
+        grid-column: auto / span 4;
+    }
+
+    .client-card {
+        grid-column: auto / span 4;
+    }
+
+    .contact-card {
+        grid-column: auto / span 4;
+    }
+}

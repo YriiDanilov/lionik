@@ -1,0 +1,54 @@
+.clients {
+    padding-top: 80px;
+    padding-bottom: 160px;
+    border-bottom: 1px solid var(--border-section-color);
+}
+
+.clients__title {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.client-card {
+    padding-left: 36px;
+    padding-top: 52px;
+    grid-column: auto / span 4;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.client-card__review-text {
+    font-size: 14px;
+    line-height: 180%;
+    max-width: 282px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border-section-color);
+    margin-bottom: 28px;
+}
+
+.client-wrapper {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding-bottom: 32px;
+}
+
+.client-card__logo {
+    border: 2px solid var(--color-blue);
+    border-radius: 50%;
+}
+
+.client-info {
+    display: grid;
+}
+
+.client-card__name {
+    font-size: 17px;
+    line-height: 180%;
+    font-weight: 600;
+}
+
+.client-card__job {
+    font-size: 14px;
+    line-height: 180%;
+}
